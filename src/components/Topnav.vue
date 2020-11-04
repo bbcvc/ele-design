@@ -8,9 +8,24 @@
 </div>
 </template>
 
+<script lang="ts">
+import {
+  inject,
+  Ref
+} from 'vue'
+export default {
+  setup() {
+    const menuVisable = inject < Ref < boolean >> ("menu")
+    console.log(`topnav获取到的是${menuVisable.value}`)
+  }
+}
+</script>
+
 <style lang="scss">
 .topnav {
-  background: pink;
+  position: relative;
+  z-index: 10;
+  background: #806400;
   display: flex;
   padding: 16px;
 
