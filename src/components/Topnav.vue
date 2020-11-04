@@ -1,6 +1,6 @@
 <template>
 <div class="topnav">
-  <div class="logo">LOGO</div>
+  <div class="logo" @click="ismenu">LOGO</div>
   <ul class="menu">
     <li>菜单1</li>
     <li>菜单2</li>
@@ -17,15 +17,21 @@ export default {
   setup() {
     const menuVisable = inject < Ref < boolean >> ("menu")
     console.log(`topnav获取到的是${menuVisable.value}`)
+    const ismenu = () => {
+      menuVisable.value = !menuVisable.value
+    }
+    return {
+      ismenu
+    }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .topnav {
   position: relative;
   z-index: 10;
-  background: #806400;
+  background: rgb(128 118 0 / 70%);
   display: flex;
   padding: 16px;
 

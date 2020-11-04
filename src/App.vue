@@ -6,7 +6,7 @@
 import {
   provide,
   ref
-} from 'Vue'
+} from 'vue'
 export default {
   name: 'App',
   setup() {
@@ -16,6 +16,6 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
   
 </style>

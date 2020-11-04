@@ -1,20 +1,28 @@
 <template>
-<Topnav></Topnav>
+<Topnav />
 <div class="content">
-  <aside>
+  <aside v-show="menuVisable">
     <h2>组件列表</h2>
     <ol>
       <li>
-        Switch 组件
+        <router-link to="">
+          Switch 组件
+        </router-link>
       </li>
       <li>
-        Button 组件
+        <router-link to="">
+          Button 组件
+        </router-link>
       </li>
       <li>
-        Dialog 组件
+        <router-link to="">
+          Dialog 组件
+        </router-link>
       </li>
       <li>
-        Tabs组件
+        <router-link to="">
+          Tabs组件
+        </router-link>
       </li>
     </ol>
   </aside>
@@ -36,7 +44,10 @@ export default {
   },
   setup() {
     const menuVisable = inject < Ref < boolean >> ("menu")
-    console.log(`doc获取到的是${menuVisable}`)
+    console.log(`doc获取到的是${menuVisable.value}`)
+    return {
+      menuVisable
+    }
   }
 }
 </script>
@@ -44,7 +55,6 @@ export default {
 <style lang="scss" scoped>
 .content {
   width: 120px;
-  padding-top: 10px;
   display: flex;
   flex-direction: column;
   background-color: rgba(221, 221, 221, .46);
@@ -53,6 +63,8 @@ export default {
   left: 0;
 
   aside {
+    padding-top: 10px;
+
     h2 {
       margin-bottom: 8px;
     }
