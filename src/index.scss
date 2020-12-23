@@ -11,3 +11,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+html,
+body {
+  min-height: 100%;
+}
+#app {
+  min-height: 100%;
+}

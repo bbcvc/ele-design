@@ -7,11 +7,16 @@ import {
   provide,
   ref
 } from 'vue'
+import {router} from "./router"
 export default {
   name: 'App',
   setup() {
-    const menuVisable = ref(false)
-    provide('menu', menuVisable)
+		let a:Number=document.documentElement.clientWidth
+		const menuVisable = ref(a>=500?true:false)
+		provide('menu', menuVisable)
+		router.afterEach((to, from) => {
+			// to and from are both route objects.
+		})
   }
 }
 </script>

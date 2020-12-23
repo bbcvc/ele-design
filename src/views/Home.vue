@@ -42,14 +42,14 @@ export default {
       justify-content: space-evenly;
 
       a {
-        width: 70px;
         height: 28px;
         border-radius: 14px;
-        background-color: #409EFF;
-        color: #ffffff;
+        background-color: rgb(64, 158, 255);
+        color: rgb(255, 255, 255);
         font-weight: 600;
         line-height: 28px;
         text-align: center;
+        padding: 0px 14px;
 
         &:hover {
           border: none;
