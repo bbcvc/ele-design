@@ -12,7 +12,7 @@ export default {
   name: 'App',
   setup() {
 		let a:Number=document.documentElement.clientWidth
-		const menuVisable = ref(a>=500?true:false)
+		const menuVisable = ref(a>=900?true:false)
 		provide('menu', menuVisable)
 		router.afterEach((to, from) => {
 			// to and from are both route objects.

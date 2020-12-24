@@ -1,15 +1,15 @@
 <template>
 	<div class="switch-demo">
 		<p>switch</p>
-		<Switch/>
+		<ele-switch/>
 	</div>
 </template>
 
 <script>
-import Switch from "../lib/Switch.vue"
+import Switch from "../lib/switch/Switch.vue"
 export default {
 	components:{
-		Switch
+			"ele-switch":Switch
 	}
 }
 </script>

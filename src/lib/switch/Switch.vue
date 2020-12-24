@@ -1,14 +1,17 @@
 <template>
 	<div class="switch">
-		<button></button>
+		<button>
+			<span>
+			</span>
+		</button>
 	</div>
 </template>
 
 <script lang="ts">
 export default {
-	name:"switch"
+	name:"Switch"
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scopde>
 </style>

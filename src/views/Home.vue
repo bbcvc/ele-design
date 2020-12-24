@@ -1,15 +1,15 @@
 <template>
-<div class="home">
-  <Topnav></Topnav>
-  <div class="banner">
-    <h1>ele-design</h1>
-    <h2>基于vue3的组件库</h2>
-    <p class="action">
-      <a href="javascript:void(0)">Github</a>
-      <router-link to="/doc">开始</router-link>
-    </p>
+  <div class="home">
+    <Topnav></Topnav>
+    <div class="banner">
+      <h1>ele-design</h1>
+      <h2>基于vue3的组件库</h2>
+      <p class="action">
+        <a href="javascript:void(0)">Github</a>
+        <router-link to="/doc">开始</router-link>
+      </p>
+    </div>
   </div>
-</div>
 </template>
 
 <script lang="ts">
@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .home {
   // min-height: 100vh;
 
