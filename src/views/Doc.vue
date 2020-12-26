@@ -87,25 +87,29 @@ main {
     overflow: auto;
   }
   section {
+    transform: scale(0.8);
     position: fixed;
     height: 100%;
     right: 0;
-    top: 60px;
+    top: 26px;
     .phone {
-      width: 360px;
-      height: 780px;
+      width: 408px;
+      height: 884px;
       display: block;
       float: right;
-      margin: 10px 35px 0 0;
+      margin: 10px 0 0;
       background-image: url('../assets/phone.png');
       background-size: contain;
       background-repeat: no-repeat;
       cursor: pointer;
       font-size: 16px;
       .mobile {
+        margin: auto;
+        margin-top: 40px;
         width: 375px;
         height: 812px;
         background-color: pink;
+        opacity: 0.8;
       }
     }
   }
