@@ -8,7 +8,7 @@
           <router-link to="/SwitchDemo"> Switch 组件 </router-link>
         </li>
         <li>
-          <router-link to=""> Button 组件 </router-link>
+          <router-link to="/ButtonDemo"> Button 组件 </router-link>
         </li>
         <li>
           <router-link to=""> Dialog 组件 </router-link>
