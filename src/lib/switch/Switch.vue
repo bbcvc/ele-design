@@ -13,7 +13,7 @@
 <script lang="ts">
 import { ref } from 'vue'
 export default {
-  name: 'eleSwitch',
+  name: 'Switch',
   props: {
     value: Boolean,
   },

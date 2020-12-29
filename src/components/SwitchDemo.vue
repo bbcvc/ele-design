@@ -6,11 +6,11 @@
 </template>
 
 <script>
-import eleSwitch from '../lib/switch/Switch.vue'
+import Switch from '../lib/switch/Switch.vue'
 import { ref } from 'vue'
 export default {
   components: {
-    'ele-switch': eleSwitch,
+    'ele-switch': Switch,
   },
   setup(props) {
     const checked = ref(false)
