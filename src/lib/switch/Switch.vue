@@ -1,9 +1,12 @@
 <template>
   <div class="ele-switch">
-    <button @click="toogleVal" :class="{ active: checked }">
+    <button @click="toogleVal" :class="{ active: value }">
       <!-- 开 关 -->
-      <span :class="{ active: checked }"> </span>
+      <span :class="{ active: value }"> </span>
     </button>
+    <div>
+      {{ value }}
+    </div>
   </div>
 </template>
 
@@ -11,12 +14,14 @@
 import { ref } from 'vue'
 export default {
   name: 'Switch',
-  setup(props) {
-    const checked = ref(false)
+  props: {
+    value: Boolean,
+  },
+  setup(props, context) {
     const toogleVal = () => {
-      checked.value = !checked.value
+      context.emit('input', !props.value)
     }
-    return { checked, toogleVal }
+    return { toogleVal }
   },
 }
 </script>
