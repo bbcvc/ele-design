@@ -13,13 +13,13 @@
 <script lang="ts">
 import { ref } from 'vue'
 export default {
-  name: 'Switch',
+  name: 'eleSwitch',
   props: {
     value: Boolean,
   },
   setup(props, context) {
     const toogleVal = () => {
-      context.emit('input', !props.value)
+      context.emit('update:value', !props.value)
     }
     return { toogleVal }
   },

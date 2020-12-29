@@ -1,16 +1,16 @@
 <template>
   <div class="switch-demo">
     <p>switch</p>
-    <ele-switch :value="checked" @input="checked = $event" />
+    <ele-switch v-model:value="checked" />
   </div>
 </template>
 
 <script>
-import Switch from '../lib/switch/Switch.vue'
+import eleSwitch from '../lib/switch/Switch.vue'
 import { ref } from 'vue'
 export default {
   components: {
-    'ele-switch': Switch,
+    'ele-switch': eleSwitch,
   },
   setup(props) {
     const checked = ref(false)
