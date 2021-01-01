@@ -1,28 +1,18 @@
 <template>
   <div class="switch-demo">
-    <p>switch</p>
-    <ele-switch v-model:value="checked" />
+    <ele-button>你好</ele-button>
   </div>
 </template>
 
 <script>
-import Switch from '../lib/switch/Switch.vue'
+import Button from '../lib/button/Button.vue'
 import { ref } from 'vue'
 export default {
   components: {
-    'ele-switch': Switch,
+    'ele-button': Button,
   },
-  setup(props) {
-    const checked = ref(false)
-    return { checked }
-  },
+  setup() {},
 }
 </script>
 
-<style lang="scss">
-.switch-demo {
-  height: 1500px;
-  background-color: pink;
-  padding: 20px;
-}
-</style>
+<style lang="scss"></style>
