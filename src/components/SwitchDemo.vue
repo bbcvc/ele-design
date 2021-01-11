@@ -1,7 +1,9 @@
 <template>
   <div class="switch-demo">
-    <p>switch</p>
-    <ele-switch v-model:value="checked" />
+    <div class="context">
+      <p>switch</p>
+      <ele-switch v-model:value="checked" />
+    </div>
   </div>
 </template>
 
@@ -19,10 +21,14 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .switch-demo {
-  height: 1500px;
+  height: 100%;
   background-color: pink;
   padding: 20px;
+  overflow: auto;
+  .context {
+    height: 5000px;
+  }
 }
 </style>

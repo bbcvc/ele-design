@@ -84,7 +84,7 @@ main {
     top: 65px;
     right: 400px;
     bottom: 10px;
-    overflow: auto;
+    overflow: hidden;
   }
   section {
     transform: scale(0.8);

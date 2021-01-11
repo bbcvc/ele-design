@@ -1,6 +1,8 @@
 <template>
-  <div class="switch-demo">
-    <ele-button>你好</ele-button>
+  <div class="button-demo">
+    <div class="context">
+      <ele-button>你好</ele-button>
+    </div>
   </div>
 </template>
 
@@ -15,4 +17,14 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.button-demo {
+  height: 100%;
+  background-color: pink;
+  overflow: auto;
+  .context {
+    height: 5000px;
+    background-color: pink;
+  }
+}
+</style>
