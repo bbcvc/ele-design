@@ -11,10 +11,10 @@
           <router-link to="/ButtonDemo"> Button 组件 </router-link>
         </li>
         <li>
-          <router-link to=""> Dialog 组件 </router-link>
+          <router-link to="/DialogDemo"> Dialog 组件 </router-link>
         </li>
         <li>
-          <router-link to=""> Tabs组件 </router-link>
+          <router-link to="/TabsDemo"> Tabs组件 </router-link>
         </li>
       </ol>
     </aside>
@@ -77,9 +77,8 @@ export default {
 }
 
 main {
-  padding-top: 60px;
   .main-body {
-    position: fixed;
+    position: absolute;
     left: 150px;
     top: 65px;
     right: 400px;
@@ -87,11 +86,11 @@ main {
     overflow: hidden;
   }
   section {
-    transform: scale(0.8);
+    transform: scale(0.7);
     position: fixed;
     height: 100%;
     right: 0;
-    top: 26px;
+    top: 0;
     .phone {
       width: 408px;
       height: 884px;

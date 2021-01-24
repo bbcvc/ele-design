@@ -28,17 +28,20 @@ export default {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  height: 44px;
+  height: 36px;
   margin: 0;
   padding: 0 18px;
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   transition: opacity 0.2s;
-  border: 1px solid #fff;
+  border: 1px solid #ddd;
   color: #fff;
+  & + .ele-button {
+    margin-left: 10px;
+  }
   &--default {
     background-color: #fff;
     color: black;
