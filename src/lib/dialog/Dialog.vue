@@ -1,7 +1,7 @@
 <template>
-  <div class="ele-dialog">
-    <div class="ele-dialog--wrapper">
-      <i class="ele-dialog--close">
+  <div class="ele-dialog" v-show="visible" @click="OnClickOverlay">
+    <div class="ele-dialog--wrapper" @click.stop>
+      <i class="ele-dialog--close" @click="close">
         <svg
           t="1611491642929"
           class="icon"
@@ -30,8 +30,8 @@
         <p>第二行字</p>
       </main>
       <footer>
-        <Button theme="primary">ok</Button>
-        <Button>cancel</Button>
+        <Button theme="primary" @click="ok">ok</Button>
+        <Button @click="cancel">cancel</Button>
       </footer>
     </div>
   </div>
@@ -39,11 +39,49 @@
 
 <script lang="ts">
 import Button from '../button/Button.vue'
+import { ref } from 'vue'
 export default {
   components: {
     Button,
   },
-  setup(props) {},
+  props: {
+    visible: {
+      type: Boolean,
+      default: false,
+    },
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: true,
+    },
+    ok: {
+      type: Function,
+    },
+    cancel: {
+      type: Function,
+    },
+  },
+  setup(props, context) {
+    const isDialog = ref(true)
+    const close = () => {
+      context.emit('update:visible', false)
+    }
+    const OnClickOverlay = () => {
+      props.closeOnClickOverlay && close()
+    }
+    const ok = () => {
+      context.emit('ok')
+    }
+    const cancel = () => {
+      context.emit('cancel')
+    }
+    return {
+      isDialog,
+      close,
+      OnClickOverlay,
+      ok,
+      cancel,
+    }
+  },
 }
 </script>
 
