@@ -1,40 +1,41 @@
 <template>
-  <div class="ele-dialog" v-show="visible" @click="OnClickOverlay">
-    <div class="ele-dialog--wrapper" @click.stop>
-      <i class="ele-dialog--close" @click="close">
-        <svg
-          t="1611491642929"
-          class="icon"
-          viewBox="0 0 1024 1024"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          p-id="2593"
-          width="16"
-          height="16"
-        >
-          <path
-            d="M891.264 901.248a30.784 30.784 0 0 1-21.76-9.024L128.256 150.976a30.72 30.72 0 1 1 43.52-43.52l741.312 741.312a30.848 30.848 0 0 1-21.824 52.48"
-            fill="#434243"
-            p-id="2594"
-          ></path>
-          <path
-            d="M150.016 901.248a30.72 30.72 0 0 1-21.76-52.544l741.312-741.248a30.784 30.784 0 0 1 43.456 43.52L171.776 892.224a30.72 30.72 0 0 1-21.76 9.024"
-            fill="#434243"
-            p-id="2595"
-          ></path>
-        </svg>
-      </i>
-      <header>标题</header>
-      <main>
-        <p>第一行字</p>
-        <p>第二行字</p>
-      </main>
-      <footer>
-        <Button theme="primary" @click="ok">ok</Button>
-        <Button @click="cancel">cancel</Button>
-      </footer>
+  <Teleport to="body">
+    <div class="ele-dialog" v-show="visible" @click="OnClickOverlay">
+      <div class="ele-dialog--wrapper" @click.stop>
+        <i class="ele-dialog--close" @click="close">
+          <svg
+            t="1611491642929"
+            class="icon"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            p-id="2593"
+            width="16"
+            height="16"
+          >
+            <path
+              d="M891.264 901.248a30.784 30.784 0 0 1-21.76-9.024L128.256 150.976a30.72 30.72 0 1 1 43.52-43.52l741.312 741.312a30.848 30.848 0 0 1-21.824 52.48"
+              fill="#434243"
+              p-id="2594"
+            ></path>
+            <path
+              d="M150.016 901.248a30.72 30.72 0 0 1-21.76-52.544l741.312-741.248a30.784 30.784 0 0 1 43.456 43.52L171.776 892.224a30.72 30.72 0 0 1-21.76 9.024"
+              fill="#434243"
+              p-id="2595"
+            ></path>
+          </svg>
+        </i>
+        <header><slot name="title" /></header>
+        <main>
+          <slot name="content" />
+        </main>
+        <footer>
+          <Button theme="primary" @click="ok">ok</Button>
+          <Button @click="cancel">cancel</Button>
+        </footer>
+      </div>
     </div>
-  </div>
+  </Teleport>
 </template>
 
 <script lang="ts">
@@ -69,10 +70,10 @@ export default {
       props.closeOnClickOverlay && close()
     }
     const ok = () => {
-      context.emit('ok')
+      props.ok?.() !== false && close()
     }
     const cancel = () => {
-      context.emit('cancel')
+      props.cancel?.() !== false && close()
     }
     return {
       isDialog,
