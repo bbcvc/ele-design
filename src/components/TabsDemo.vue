@@ -1,11 +1,20 @@
 <template>
-  <div>
-    <!-- 组件 -->
-  </div>
+  <div>Tabs示例</div>
+  <h1>示例</h1>
+  <Tabs>
+    <Tab></Tab>
+  </Tabs>
 </template>
 
 <script lang="ts">
-export default {}
+import Tabs from '../lib/tabs/Tabs.vue'
+import Tab from '../lib/tabs/Tab.vue'
+export default {
+  components: {
+    Tabs,
+    Tab,
+  },
+}
 </script>
 
 <style lang="scss"></style>
