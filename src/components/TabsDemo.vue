@@ -2,7 +2,8 @@
   <div>Tabs示例</div>
   <h1>示例</h1>
   <Tabs>
-    <Tab></Tab>
+    <Tab title="tab1"></Tab>
+    <Tab title="tab2"></Tab>
   </Tabs>
 </template>
 
