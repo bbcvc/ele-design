@@ -1,6 +1,8 @@
-<template></template>
+<template>
+  <div><slot></slot></div>
+</template>
 
-<script>
+<script lang="ts">
 export default {}
 </script>
 
