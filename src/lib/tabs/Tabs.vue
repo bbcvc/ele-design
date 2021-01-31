@@ -70,6 +70,7 @@ export default {
       cursor: pointer;
       &.selected {
         color: #1989fd;
+        border-bottom: 2px solid #1989fd;
       }
     }
   }

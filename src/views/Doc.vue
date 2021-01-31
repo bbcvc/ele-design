@@ -53,14 +53,15 @@ export default {
   width: 120px;
   display: flex;
   flex-direction: column;
-  background-color: #ddd;
   position: fixed;
+  background-color: #fff;
   top: 60px;
   left: 0;
   bottom: 0;
   z-index: 2020;
   padding-left: 20px;
   box-sizing: content-box;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   aside {
     padding-top: 10px;
 
@@ -118,7 +119,6 @@ main {
     position: fixed;
     height: 100%;
     left: 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
     transform: translate(-280px, 0);
   }
