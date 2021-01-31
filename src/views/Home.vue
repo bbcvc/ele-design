@@ -5,9 +5,7 @@
       <h1>ele-design</h1>
       <h2>基于vue3的组件库</h2>
       <p class="action">
-        <a href="https://github.com/Libidos24/ele-design" target="_blank"
-          >Github</a
-        >
+        <a href="https://github.com/bbcvc" target="_blank">关于我</a>
         <router-link to="/doc">开始</router-link>
       </p>
       <img
