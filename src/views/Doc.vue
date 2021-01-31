@@ -2,7 +2,7 @@
   <Topnav />
   <div :class="menuVisable ? 'open' : ''" class="sidebar">
     <aside>
-      <h2>组件列表</h2>
+      <h2>简单组件</h2>
       <ol>
         <li>
           <router-link to="/SwitchDemo"> Switch 组件 </router-link>

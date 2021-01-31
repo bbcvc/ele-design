@@ -42,8 +42,8 @@
       </svg>
     </div>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li @click="linkTo('https://github.com/bbcvc/ele-design')">github</li>
+      <li @click="linkTo('https://gitee.com/eric_Libidos')">gitee</li>
     </ul>
   </div>
 </template>
@@ -57,10 +57,14 @@ export default {
     const togglemenu = () => {
       menuVisable.value = !menuVisable.value
     }
-    const linkTo = () => {
-      router.push({
-        path: '/',
-      })
+    const linkTo = (link) => {
+      if (typeof link !== 'string') {
+        router.push({
+          path: '/',
+        })
+      } else {
+        window.open(link)
+      }
     }
     return {
       togglemenu,
