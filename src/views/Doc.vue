@@ -119,7 +119,7 @@ main {
     top: 65px;
     right: 400px;
     bottom: 10px;
-    overflow: hidden;
+    overflow: auto;
   }
   section {
     transform: scale(0.7);
