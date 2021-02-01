@@ -3,8 +3,8 @@
     <h2>介绍</h2>
     <p>
       Ele-design是一个简单的前端UI框架，基于vue3.0开源 UI组件库，使用vite vue3.0
-      typescript构建，由 ele-design，如果你对框架的原生风格不满意，
-      不用担心类覆盖样式的命名也是可能的， ele设计也支持移动显示。
+      typescript构建，如果你对框架的原生风格不满意，
+      不用担心类覆盖样式的命名也是可以的， ele-design也支持移动显示。
     </p>
     <h2 title="github">
       <a
