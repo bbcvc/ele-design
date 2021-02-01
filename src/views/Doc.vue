@@ -32,7 +32,7 @@
     </aside>
   </div>
   <!-- 主题内容区 -->
-  <main>
+  <main @click="togglemenu">
     <div class="main-body">
       <router-view></router-view>
     </div>
@@ -53,8 +53,12 @@ export default {
   },
   setup() {
     const menuVisable = inject<Ref<boolean>>('menu')
+    const togglemenu = () => {
+      menuVisable.value ? (menuVisable.value = false) : ''
+    }
     return {
       menuVisable,
+      togglemenu,
     }
   },
 }
@@ -86,8 +90,11 @@ export default {
         height: 30px;
         line-height: 30px;
         position: relative;
-        a {
+        > a {
           font-size: 16px;
+          width: 100%;
+          height: 100%;
+          display: block;
         }
         a.router-link-exact-active {
           color: #1296db;
