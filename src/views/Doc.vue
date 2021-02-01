@@ -84,6 +84,29 @@ export default {
     ol {
       li {
         height: 30px;
+        line-height: 30px;
+        position: relative;
+        a {
+          font-size: 16px;
+        }
+        a.router-link-exact-active {
+          color: #1296db;
+        }
+      }
+    }
+    .router-link-exact-active {
+      &::after {
+        content: '';
+        display: block;
+        background-image: url('../assets/对号.png');
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-size: cover;
+        background-position: center;
+        width: 16px;
+        height: 16px;
       }
     }
   }

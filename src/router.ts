@@ -17,7 +17,7 @@ const router = createRouter({
     { path: '/', component: Home },
 		{ path: '/doc', component: Doc,
 		children:[
-			{ path: '', component: Intro },
+			{ path: '', redirect:'/doc/Intro', },
 			{ path: 'SwitchDemo', component: SwitchDemo },
 			{ path: 'ButtonDemo', component: ButtonDemo },
 			{ path: 'DialogDemo', component: DialogDemo },

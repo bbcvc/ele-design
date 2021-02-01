@@ -4,6 +4,15 @@
   box-sizing: border-box;
   font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, FreeSans, Arial,
     sansserif;
+  &::-webkit-scrollbar-thumb  {
+    background-color: #7d7d7d;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar  {
+    width: 6px;
+    background-color: #f1f1f1;
+  }
 }
 ul,
 ol {
@@ -20,12 +29,16 @@ body {
 #app {
   min-height: 100%;
 }
-::-webkit-scrollbar-thumb  {
-  background-color: #7d7d7d;
-  border-radius: 3px;
+.markdown-body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
 }
 
-::-webkit-scrollbar  {
-  width: 6px;
-  background-color: #f1f1f1;
+@media (max-width: 767px) {
+  .markdown-body {
+    padding: 15px;
+  }
 }
