@@ -1,6 +1,10 @@
 <template>
   <div class="topnav">
-    <div class="m-toggle" @click="togglemenu">
+    <div
+      class="m-toggle"
+      @click="togglemenu"
+      :style="[isComponted === 'doc' ? '' : 'display: none;']"
+    >
       <svg
         t="1608647860361"
         class="icon"
@@ -52,6 +56,12 @@
 import { inject, Ref } from 'vue'
 import { router } from '../router'
 export default {
+  props: {
+    isComponted: {
+      type: String,
+      default: 'home',
+    },
+  },
   setup() {
     const menuVisable = inject<Ref<boolean>>('menu')
     const togglemenu = () => {

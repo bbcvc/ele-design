@@ -1,5 +1,5 @@
 <template>
-  <Topnav />
+  <Topnav isComponted="doc" />
   <div :class="menuVisable ? 'open' : ''" class="sidebar">
     <aside>
       <h2>简单组件</h2>
