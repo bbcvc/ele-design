@@ -2,19 +2,31 @@
   <Topnav isComponted="doc" />
   <div :class="menuVisable ? 'open' : ''" class="sidebar">
     <aside>
+      <h2>文档</h2>
+      <ol>
+        <li>
+          <router-link to="/doc/Intro"> 介绍 </router-link>
+        </li>
+        <li>
+          <router-link to="/doc/Install"> 安装 </router-link>
+        </li>
+        <li>
+          <router-link to="/doc/QuickStart"> 快速开始 </router-link>
+        </li>
+      </ol>
       <h2>简单组件</h2>
       <ol>
         <li>
-          <router-link to="/SwitchDemo"> Switch 组件 </router-link>
+          <router-link to="/doc/SwitchDemo"> Switch 组件 </router-link>
         </li>
         <li>
-          <router-link to="/ButtonDemo"> Button 组件 </router-link>
+          <router-link to="/doc/ButtonDemo"> Button 组件 </router-link>
         </li>
         <li>
-          <router-link to="/DialogDemo"> Dialog 组件 </router-link>
+          <router-link to="/doc/DialogDemo"> Dialog 组件 </router-link>
         </li>
         <li>
-          <router-link to="/TabsDemo"> Tabs组件 </router-link>
+          <router-link to="/doc/TabsDemo"> Tabs组件 </router-link>
         </li>
       </ol>
     </aside>

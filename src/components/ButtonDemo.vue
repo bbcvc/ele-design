@@ -29,12 +29,9 @@ export default {
 <style lang="scss" scoped>
 .button-demo {
   height: 100%;
-  background-color: pink;
   overflow: auto;
   .context {
     padding: 30px;
-    height: 5000px;
-    background-color: pink;
   }
   .ele-button.ele-button {
     margin-left: 10px;

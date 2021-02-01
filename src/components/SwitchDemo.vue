@@ -24,11 +24,7 @@ export default {
 <style lang="scss" scoped>
 .switch-demo {
   height: 100%;
-  background-color: pink;
   padding: 20px;
   overflow: auto;
-  .context {
-    height: 5000px;
-  }
 }
 </style>
