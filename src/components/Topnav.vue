@@ -128,6 +128,8 @@ export default {
     }
     > .m-toggle {
       display: block;
+      width: 40px;
+      height: 40px;
     }
   }
 }
