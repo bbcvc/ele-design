@@ -32,7 +32,7 @@
     </aside>
   </div>
   <!-- 主题内容区 -->
-  <main @click="togglemenu">
+  <main @touchstart="togglemenu">
     <div class="main-body">
       <router-view></router-view>
     </div>
