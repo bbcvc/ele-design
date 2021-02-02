@@ -71,7 +71,7 @@ export default {
   flex-direction: column;
   position: fixed;
   background-color: #fff;
-  top: 60px;
+  top: 48px;
   left: 0;
   bottom: 0;
   z-index: 2020;

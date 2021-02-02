@@ -180,7 +180,7 @@ export default {
   .banner {
     height: 500px;
     position: relative;
-    top: 60px;
+    top: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -208,15 +208,15 @@ export default {
       justify-content: space-evenly;
 
       a {
-        height: 64px;
-        border-radius: 32px;
+        height: 48px;
+        border-radius: 24px;
         background-color: #fff;
         color: rgb(255, 255, 255);
         font-weight: 600;
         font-size: 24px;
-        line-height: 64px;
+        line-height: 48px;
         text-align: center;
-        padding: 0px 30px;
+        padding: 0px 28px;
         color: black;
         & + a {
           margin-left: 15px;

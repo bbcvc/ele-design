@@ -90,10 +90,10 @@ export default {
   left: 0;
   right: 0;
   z-index: 10;
-  height: 60px;
+  height: 48px;
   background: #fff;
   display: flex;
-  padding: 16px;
+  padding: 9px 18px;
   box-shadow: 0 0 1px rgb(0 0 0 / 25%);
   > .logo {
     max-height: 6em;
@@ -117,6 +117,13 @@ export default {
     > li {
       margin: 0 1em;
       cursor: pointer;
+      list-style: none;
+      font-weight: bold;
+      transition: margin-top 0.5s;
+      &:hover {
+        margin-top: 10px;
+        color: #1866d6;
+      }
     }
   }
   @media screen and (max-width: 900px) {
