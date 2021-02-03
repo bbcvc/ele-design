@@ -1,15 +1,18 @@
 <template>
-  <div class="switch-demo">
-    <div class="context">
-      <h3>switch组件</h3>
-      <p>默认Switch</p>
-      <ele-switch />
-      <p>禁止Switch</p>
-      <ele-switchs />
-      <p>自定义大小Switch</p>
-      <ele-switchss />
-    </div>
-  </div>
+  <article class="markdown-body">
+    <h3>switch组件</h3>
+    <p>默认Switch</p>
+    <ele-switch />
+    <pre><code>11</code></pre>
+
+    <p>禁止Switch</p>
+    <ele-switchs></ele-switchs>
+    <pre><code>11</code></pre>
+
+    <p>自定义大小Switch</p>
+    <ele-switchss></ele-switchss>
+    <pre><code>11</code></pre>
+  </article>
 </template>
 
 <script>
@@ -30,5 +33,12 @@ export default {
   height: 100%;
   padding: 20px;
   overflow: auto;
+}
+.button-demo {
+  height: 100%;
+  overflow: auto;
+  .context {
+    padding: 30px 15px 30px 0;
+  }
 }
 </style>

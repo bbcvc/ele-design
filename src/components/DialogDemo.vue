@@ -1,7 +1,13 @@
 <template>
-  <div>组件</div>
-  <dialog-demo></dialog-demo>
-  <dialog-func></dialog-func>
+  <article class="markdown-body">
+    <h3>常规引入</h3>
+    <dialog-demo></dialog-demo>
+    <pre><code>11</code></pre>
+
+    <h3>一句引入</h3>
+    <dialog-func></dialog-func>
+    <pre><code>11</code></pre>
+  </article>
 </template>
 
 <script lang="ts">
@@ -45,5 +51,3 @@ export default {
   },
 }
 </script>
-
-<style></style>

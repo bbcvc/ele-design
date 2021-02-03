@@ -1,15 +1,27 @@
 <template>
-  <div class="button-demo">
-    <div class="context">
-      <ele-button></ele-button>
-      <br />
-      <round-button></round-button>
-      <br />
-      <not-button></not-button>
-      <br />
-      <size-button></size-button>
-    </div>
-  </div>
+  <article class="markdown-body">
+    <h3>默认按钮</h3>
+    <ele-button></ele-button>
+    <pre><code>11</code></pre>
+  </article>
+  <br />
+  <h3>按钮形状</h3>
+  <round-button></round-button>
+  <article class="markdown-body">
+    <pre><code>11</code></pre>
+  </article>
+  <br />
+  <h3>禁止选中</h3>
+  <not-button></not-button>
+  <article class="markdown-body">
+    <pre><code>11</code></pre>
+  </article>
+  <br />
+  <h3>按钮大小</h3>
+  <size-button></size-button>
+  <article class="markdown-body">
+    <pre><code>11</code></pre>
+  </article>
 </template>
 
 <script>
@@ -34,17 +46,10 @@ export default {
 </script>
 
 <style lang="scss">
-.button-demo {
-  height: 100%;
-  overflow: auto;
-  .context {
-    padding: 30px;
-  }
-  .ele-button.ele-button {
-    margin-left: 10px;
-  }
-  .ele-button {
-    margin: 5px 0;
-  }
+.ele-button.ele-button {
+  margin-left: 10px;
+}
+.ele-button {
+  margin: 5px 0;
 }
 </style>

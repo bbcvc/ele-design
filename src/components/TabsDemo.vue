@@ -1,20 +1,18 @@
 <template>
-  <div>Tabs示例</div>
-  <h1>示例</h1>
-  <Tabs v-model:selected="x">
-    <Tab title="导航一">组件一</Tab>
-    <Tab title="导航二">组件二</Tab>
-  </Tabs>
+  <article class="markdown-body">
+    <h3>示例</h3>
+    <Tabs> </Tabs>
+    <pre><code>11</code></pre>
+  </article>
 </template>
 
 <script lang="ts">
 import { ref } from 'vue'
-import Tabs from '../lib/tabs/Tabs.vue'
-import Tab from '../lib/tabs/Tab.vue'
+import Tabs from '../demo/Tabs/Tabsdemo.vue'
+
 export default {
   components: {
     Tabs,
-    Tab,
   },
   setup(props) {
     const x = ref('导航一')
@@ -24,5 +22,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss"></style>

@@ -1,3 +1,6 @@
+<demo>
+默认按钮
+</demo>
 <template>
   <ele-button @click="onClick" theme="default">默认按钮</ele-button>
   <ele-button @click="onClick" theme="primary">主要按钮</ele-button>

@@ -1,3 +1,6 @@
+<demo>
+按钮大小
+</demo>
 <template>
   <ele-button @click="onClick" large="large">超大按钮</ele-button>
   <ele-button @click="onClick">默认按钮</ele-button>

@@ -1,3 +1,6 @@
+<demo>
+禁止按钮
+</demo>
 <template>
   <ele-button @click="onClick" theme="primary">默认按钮</ele-button>
   <ele-button @click="onClick" theme="primary" disabled="true"

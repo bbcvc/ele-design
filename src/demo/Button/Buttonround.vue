@@ -1,3 +1,6 @@
+<demo>
+按钮形状
+</demo>
 <template>
   <ele-button @click="onClick" theme="default" square="true"
     >直角按钮</ele-button
