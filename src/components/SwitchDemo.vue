@@ -1,8 +1,10 @@
 <template>
   <div class="switch-demo">
     <div class="context">
-      <p>switch</p>
+      <p>switch组件</p>
       <ele-switch v-model:value="checked" />
+      <ele-switch v-model:value="checkeds" disabled />
+      <ele-switch v-model:value="checkedss" size="24px" />
     </div>
   </div>
 </template>
@@ -16,7 +18,9 @@ export default {
   },
   setup(props) {
     const checked = ref(false)
-    return { checked }
+    const checkeds = ref(true)
+    const checkedss = ref(false)
+    return { checked, checkeds, checkedss }
   },
 }
 </script>

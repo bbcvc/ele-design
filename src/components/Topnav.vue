@@ -113,6 +113,7 @@ export default {
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
+    margin-right: 18px;
 
     > li {
       margin: 0 1em;
@@ -121,8 +122,10 @@ export default {
       font-weight: bold;
       transition: margin-top 0.5s;
       &:hover {
-        margin-top: 10px;
+        margin-top: 8px;
+        transform: scale(1.1);
         color: #1866d6;
+        border-bottom: 3px solid #1866d6;
       }
     }
   }

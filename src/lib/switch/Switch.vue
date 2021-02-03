@@ -1,6 +1,10 @@
 <template>
   <div class="ele-switch">
-    <button @click="toogleVal" :class="{ active: value }">
+    <button
+      @click="toogleVal"
+      :class="[value ? 'active' : '', disabled ? 'disabled' : '']"
+      :style="{ fontSize: size }"
+    >
       <!-- 开 关 -->
       <span :class="{ active: value }"> </span>
     </button>
@@ -11,14 +15,25 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
 export default {
   name: 'Switch',
   props: {
-    value: Boolean,
+    value: {
+      type: Boolean,
+      default: true,
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    size: {
+      type: String,
+      default: '30px',
+    },
   },
   setup(props, context) {
     const toogleVal = () => {
+      if (props.disabled) return
       context.emit('update:value', !props.value)
     }
     return { toogleVal }
@@ -29,30 +44,40 @@ export default {
 <style lang="scss">
 .ele-switch {
   button {
-    width: 52px;
-    height: 22px;
+    position: relative;
+    width: 2em;
+    height: 1em;
+    padding: 2px;
     background-color: #ddd;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 1em;
+    cursor: pointer;
     overflow: hidden;
-    transition: all 300ms ease-in;
+    transition: all 0.3s cubic-bezier(0.3, 1.05, 0.4, 1.05);
+    &.disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
     &:focus {
       outline: none;
     }
     &.active {
-      background-color: green;
+      background-color: #1989fa;
     }
     span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(0);
       display: block;
-      width: 18px;
-      height: 18px;
+      width: 1em;
+      height: 1em;
       border-radius: 100%;
       border: 1px solid #fff;
       background-color: #fff;
-      transform: translateX(1px);
       transition: all 300ms ease-in;
       &.active {
-        transform: translateX(calc(50px - 18px));
+        transform: translateX(1em);
       }
     }
   }

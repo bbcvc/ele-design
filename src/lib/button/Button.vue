@@ -1,5 +1,8 @@
 <template>
-  <button class="ele-button" :class="`ele-button--${theme}`">
+  <button
+    class="ele-button"
+    :class="[`ele-button--${theme}`, { disabled }, { round }, { square }]"
+  >
     <slot />
   </button>
 </template>
@@ -10,6 +13,18 @@ export default {
     theme: {
       type: String,
       default: 'default',
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    round: {
+      type: Boolean,
+      default: false,
+    },
+    square: {
+      type: Boolean,
+      default: false,
     },
   },
   setup(props, context) {
@@ -27,7 +42,7 @@ export default {
 .ele-button {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
+  box-sizing: content-box;
   height: 36px;
   margin: 0;
   padding: 0 18px;
@@ -61,6 +76,16 @@ export default {
   &--danger {
     background-color: red;
     border-color: red;
+  }
+  &.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  &.square {
+    border-radius: 0;
+  }
+  &.round {
+    border-radius: 999px;
   }
 }
 </style>

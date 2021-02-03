@@ -36,5 +36,8 @@ export default {
   .ele-button.ele-button {
     margin-left: 10px;
   }
+  .ele-button {
+    margin: 5px 0;
+  }
 }
 </style>
