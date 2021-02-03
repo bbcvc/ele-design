@@ -1,9 +1,16 @@
 <template>
   <button
     class="ele-button"
-    :class="[`ele-button--${theme}`, { disabled }, { round }, { square }]"
+    :class="[
+      `ele-button--${theme}`,
+      { disabled },
+      { round },
+      { square },
+      { large },
+      { mini },
+    ]"
   >
-    <slot />
+    <span ref="ssize"><slot /></span>
   </button>
 </template>
 
@@ -26,6 +33,12 @@ export default {
       type: Boolean,
       default: false,
     },
+    large: {
+      type: String,
+    },
+    mini: {
+      type: String,
+    },
   },
   setup(props, context) {
     const { ...rest } = context.attrs
@@ -44,10 +57,10 @@ export default {
   display: inline-block;
   box-sizing: content-box;
   min-width: 30px;
-  height: 36px;
+  font-size: 16px;
+  height: 32px;
   margin: 0;
   padding: 2px 10px;
-  font-size: 16px;
   line-height: 1.2;
   text-align: center;
   border-radius: 4px;
@@ -55,6 +68,23 @@ export default {
   transition: opacity 0.2s;
   border: 1px solid #ddd;
   color: #fff;
+  &.large {
+    height: 48px;
+    span {
+      display: block;
+      font-size: 24px;
+    }
+  }
+  &.mini {
+    height: 24px;
+    span {
+      display: block;
+      font-size: 16px;
+    }
+  }
+  span {
+    display: block;
+  }
   & + .ele-button {
     margin-left: 10px;
   }

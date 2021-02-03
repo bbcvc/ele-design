@@ -1,21 +1,28 @@
 <template>
   <div class="button-demo">
     <div class="context">
-      <ele-button @click="onClick" theme="default">默认按钮</ele-button>
-      <ele-button @click="onClick" theme="primary">主要按钮</ele-button>
-      <ele-button @click="onClick" theme="info">信息按钮</ele-button>
-      <ele-button @click="onClick" theme="warning">警告按钮</ele-button>
-      <ele-button @click="onClick" theme="danger">危险按钮</ele-button>
+      <ele-button></ele-button>
+      <br />
+      <round-button></round-button>
+      <br />
+      <not-button></not-button>
+      <br />
+      <size-button></size-button>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import Button from '../lib/button/Button.vue'
-import { ref } from 'vue'
+<script>
+import Button from '../demo/Button/Buttondefault.vue'
+import roundButton from '../demo/Button/Buttonround.vue'
+import sizeButton from '../demo/Button/Buttonsize.vue'
+import notButton from '../demo/Button/Buttonnot.vue'
 export default {
   components: {
     'ele-button': Button,
+    'round-button': roundButton,
+    'size-button': sizeButton,
+    'not-button': notButton,
   },
   setup() {
     const onClick = () => {
@@ -26,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .button-demo {
   height: 100%;
   overflow: auto;
