@@ -1,7 +1,16 @@
-<template></template>
+<template>
+  <article class="markdown-body" v-html="QuickStart"></article>
+</template>
 
 <script>
-export default {}
+import QuickStart from '../markdown/QuickStart.md'
+export default {
+  data() {
+    return {
+      QuickStart,
+    }
+  },
+}
 </script>
 
 <style></style>
