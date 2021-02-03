@@ -43,9 +43,10 @@ export default {
   position: relative;
   display: inline-block;
   box-sizing: content-box;
+  min-width: 30px;
   height: 36px;
   margin: 0;
-  padding: 2px 8px;
+  padding: 2px 10px;
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
