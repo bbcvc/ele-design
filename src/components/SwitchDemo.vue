@@ -1,26 +1,26 @@
 <template>
   <div class="switch-demo">
     <div class="context">
-      <p>switch组件</p>
-      <ele-switch v-model:value="checked" />
-      <ele-switch v-model:value="checkeds" disabled />
-      <ele-switch v-model:value="checkedss" size="24px" />
+      <h3>switch组件</h3>
+      <p>默认Switch</p>
+      <ele-switch />
+      <p>禁止Switch</p>
+      <ele-switchs />
+      <p>自定义大小Switch</p>
+      <ele-switchss />
     </div>
   </div>
 </template>
 
 <script>
-import Switch from '../lib/switch/Switch.vue'
-import { ref } from 'vue'
+import Switch from '../demo/Switch/Switchdemo.vue'
+import Switch2 from '../demo/Switch/Switchdemo2.vue'
+import Switch3 from '../demo/Switch/Switchdemo3.vue'
 export default {
   components: {
     'ele-switch': Switch,
-  },
-  setup(props) {
-    const checked = ref(false)
-    const checkeds = ref(true)
-    const checkedss = ref(false)
-    return { checked, checkeds, checkedss }
+    'ele-switchs': Switch2,
+    'ele-switchss': Switch3,
   },
 }
 </script>

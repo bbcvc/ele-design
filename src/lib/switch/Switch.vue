@@ -43,6 +43,10 @@ export default {
 
 <style lang="scss">
 .ele-switch {
+  display: inline-block;
+  & + .ele-switch {
+    margin-left: 15px;
+  }
   button {
     position: relative;
     width: 2em;

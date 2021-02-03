@@ -1,24 +1,12 @@
 <template>
   <div>组件</div>
-  <ele-dialog
-    v-model:visible="x"
-    @update:visble="x = $event"
-    :ok="f1"
-    :cancel="f2"
-  >
-    <template v-slot:title>
-      <div>提示</div>
-    </template>
-    <template v-slot:content>
-      <div>hi1</div>
-      <div>hi2</div>
-    </template>
-  </ele-dialog>
-  <ele-button @click="toggle">展示</ele-button>
-  <ele-button @click="showDialog">打开</ele-button>
+  <dialog-demo></dialog-demo>
+  <dialog-func></dialog-func>
 </template>
 
 <script lang="ts">
+import DialogDemo from '../demo/Dialog/Dialogdefault.vue'
+import Dialogfunc from '../demo/Dialog/Dialogfunc.vue'
 import Dialog from '../lib/dialog/Dialog.vue'
 import Button from '../lib/button/Button.vue'
 import { openDialog } from '../lib'
@@ -27,6 +15,8 @@ export default {
   components: {
     'ele-dialog': Dialog,
     'ele-button': Button,
+    'dialog-demo': DialogDemo,
+    'dialog-func': Dialogfunc,
   },
   setup(props) {
     const x = ref(false)
