@@ -45,7 +45,7 @@ export default {
   box-sizing: content-box;
   height: 36px;
   margin: 0;
-  padding: 0 18px;
+  padding: 2px 8px;
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
