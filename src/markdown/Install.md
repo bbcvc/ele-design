@@ -8,4 +8,4 @@
 npm i ele-design -S
 ```
 
-下一节:[安装](./#/doc/QuickStart)
+下一节: [快速开始](./#/doc/QuickStart)

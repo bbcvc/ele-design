@@ -14,4 +14,4 @@ I make elegantly professional **🌐 Websites and 📱 Hybrid Development** for 
 - ⛵ Encouraging people for open source collaborations.
 - 📫 How to reach me: [📡twitter](https://twitter.com/Eric55718370)、[🍻bilibli](https://space.bilibili.com/87795515)、[📸instagram](https://www.instagram.com/beetofday/)
 
-下一节:[安装](./#/doc/Install)
+下一节: [安装](./#/doc/Install)

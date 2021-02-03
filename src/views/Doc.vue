@@ -38,7 +38,29 @@
     </div>
     <section>
       <div class="phone phone-m">
-        <div class="mobile"></div>
+        <div class="mobile">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="../assets/s1.webp" />
+              </div>
+              <div class="swiper-slide">
+                <img src="../assets/s2.webp" />
+              </div>
+              <div class="swiper-slide">
+                <img src="../assets/s3.webp" />
+              </div>
+              <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            <!-- 如果需要导航按钮 -->
+            <!--<div class="swiper-button-prev"></div>-->
+            <!--<div class="swiper-button-next"></div>-->
+            <!-- 如果需要滚动条 -->
+            <!--<div class="swiper-scrollbar"></div>-->
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -149,9 +171,14 @@ main {
         margin: auto;
         margin-top: 40px;
         width: 375px;
-        height: 812px;
+        height: 793px;
+        border-radius: 38px;
         background-color: pink;
         opacity: 0.8;
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
       }
     }
   }
