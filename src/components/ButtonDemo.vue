@@ -2,25 +2,19 @@
   <article class="markdown-body">
     <h3>默认按钮</h3>
     <ele-button></ele-button>
-    <pre><code>{{Button.__sourceCode}}</code></pre>
-  </article>
-  <br />
-  <h3>按钮形状</h3>
-  <round-button></round-button>
-  <article class="markdown-body">
-    <pre><code>{{roundButton.__sourceCode}}</code></pre>
-  </article>
-  <br />
-  <h3>禁止选中</h3>
-  <not-button></not-button>
-  <article class="markdown-body">
-    <pre><code>{{sizeButton.__sourceCode}}</code></pre>
-  </article>
-  <br />
-  <h3>按钮大小</h3>
-  <size-button></size-button>
-  <article class="markdown-body">
-    <pre><code>{{notButton.__sourceCode}}</code></pre>
+    <pre><code v-html="Prism.highlight( Button.__sourceCode,Prism.languages.html,'html')"></code></pre>
+    <br />
+    <h3>按钮形状</h3>
+    <round-button></round-button>
+    <pre><code v-html="Prism.highlight( roundButton.__sourceCode,Prism.languages.html,'html')"></code></pre>
+    <br />
+    <h3>禁止选中</h3>
+    <not-button></not-button>
+    <pre><code v-html="Prism.highlight( sizeButton.__sourceCode,Prism.languages.html,'html')"></code></pre>
+    <br />
+    <h3>按钮大小</h3>
+    <size-button></size-button>
+    <pre><code v-html="Prism.highlight( notButton.__sourceCode,Prism.languages.html,'html')"></code></pre>
   </article>
 </template>
 
@@ -29,6 +23,8 @@ import Button from '../demo/Button/Buttondefault.vue'
 import roundButton from '../demo/Button/Buttonround.vue'
 import sizeButton from '../demo/Button/Buttonsize.vue'
 import notButton from '../demo/Button/Buttonnot.vue'
+import 'prismjs'
+const Prism = window.Prism
 export default {
   components: {
     'ele-button': Button,
@@ -40,7 +36,7 @@ export default {
     const onClick = () => {
       console.log('click')
     }
-    return { onClick, Button, roundButton, sizeButton, notButton }
+    return { onClick, Button, roundButton, sizeButton, notButton, Prism }
   },
 }
 </script>

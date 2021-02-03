@@ -10,3 +10,5 @@ import { eleDesign } from 'eleDesign'
 
 createApp(App).use(eleDesign).mount('#app')
 ```
+
+下一节: [立即开始](./#/doc/SwitchDemo)

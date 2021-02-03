@@ -3,15 +3,15 @@
     <h3>switch组件</h3>
     <p>默认Switch</p>
     <ele-switch />
-    <pre><code>{{Switch.__sourceCode}}</code></pre>
+    <pre><code v-html="Prism.highlight( Switch.__sourceCode,Prism.languages.html,'html')"></code></pre>
 
     <p>禁止Switch</p>
     <ele-switchs></ele-switchs>
-    <pre><code>{{Switch2.__sourceCode}}</code></pre>
+    <pre><code  v-html="Prism.highlight( Switch2.__sourceCode,Prism.languages.html,'html')"></code></pre>
 
     <p>自定义大小Switch</p>
     <ele-switchss></ele-switchss>
-    <pre><code>{{Switch3.__sourceCode}}</code></pre>
+    <pre><code  v-html="Prism.highlight( Switch3.__sourceCode,Prism.languages.html,'html')"></code></pre>
   </article>
 </template>
 
@@ -19,6 +19,8 @@
 import Switch from '../demo/Switch/Switchdemo.vue'
 import Switch2 from '../demo/Switch/Switchdemo2.vue'
 import Switch3 from '../demo/Switch/Switchdemo3.vue'
+import 'prismjs'
+const Prism = window.Prism
 export default {
   components: {
     'ele-switch': Switch,
@@ -30,6 +32,7 @@ export default {
       Switch,
       Switch2,
       Switch3,
+      Prism,
     }
   },
 }
