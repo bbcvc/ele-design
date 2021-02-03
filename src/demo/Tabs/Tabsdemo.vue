@@ -1,3 +1,6 @@
+<demo>
+Tabs
+</demo>
 <template>
   <Tabs v-model:selected="x">
     <Tab title="导航一">组件一</Tab>

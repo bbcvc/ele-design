@@ -1,3 +1,6 @@
+<demo>
+默认switch
+</demo>
 <template>
   <ele-switch v-model:value="checked" />
 </template>
@@ -15,5 +18,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped></style>

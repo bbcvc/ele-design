@@ -2,25 +2,25 @@
   <article class="markdown-body">
     <h3>默认按钮</h3>
     <ele-button></ele-button>
-    <pre><code>11</code></pre>
+    <pre><code>{{Button.__sourceCode}}</code></pre>
   </article>
   <br />
   <h3>按钮形状</h3>
   <round-button></round-button>
   <article class="markdown-body">
-    <pre><code>11</code></pre>
+    <pre><code>{{roundButton.__sourceCode}}</code></pre>
   </article>
   <br />
   <h3>禁止选中</h3>
   <not-button></not-button>
   <article class="markdown-body">
-    <pre><code>11</code></pre>
+    <pre><code>{{sizeButton.__sourceCode}}</code></pre>
   </article>
   <br />
   <h3>按钮大小</h3>
   <size-button></size-button>
   <article class="markdown-body">
-    <pre><code>11</code></pre>
+    <pre><code>{{notButton.__sourceCode}}</code></pre>
   </article>
 </template>
 
@@ -40,7 +40,7 @@ export default {
     const onClick = () => {
       console.log('click')
     }
-    return { onClick }
+    return { onClick, Button, roundButton, sizeButton, notButton }
   },
 }
 </script>

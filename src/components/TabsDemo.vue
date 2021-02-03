@@ -2,12 +2,11 @@
   <article class="markdown-body">
     <h3>示例</h3>
     <Tabs> </Tabs>
-    <pre><code>11</code></pre>
+    <pre><code>{{Tabs.__sourceCode}}</code></pre>
   </article>
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
 import Tabs from '../demo/Tabs/Tabsdemo.vue'
 
 export default {
@@ -15,9 +14,8 @@ export default {
     Tabs,
   },
   setup(props) {
-    const x = ref('导航一')
     return {
-      x,
+      Tabs,
     }
   },
 }

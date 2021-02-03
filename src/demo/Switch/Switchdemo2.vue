@@ -1,3 +1,6 @@
+<demo>
+禁止选择switch
+</demo>
 <template>
   <ele-switch v-model:value="checked" disabled />
 </template>

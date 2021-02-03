@@ -1,3 +1,6 @@
+<demo>
+自定义大小switch
+</demo>
 <template>
   <ele-switch v-model:value="checked" size="24px" />
   <ele-switch v-model:value="checked" size="30px" />

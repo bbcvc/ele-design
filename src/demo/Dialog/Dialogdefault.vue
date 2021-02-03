@@ -1,3 +1,6 @@
+<demo>
+dialog默认引入
+</demo>
 <template>
   <ele-button @click="toggle">展示</ele-button>
   <ele-dialog

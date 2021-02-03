@@ -3,15 +3,15 @@
     <h3>switch组件</h3>
     <p>默认Switch</p>
     <ele-switch />
-    <pre><code>11</code></pre>
+    <pre><code>{{Switch.__sourceCode}}</code></pre>
 
     <p>禁止Switch</p>
     <ele-switchs></ele-switchs>
-    <pre><code>11</code></pre>
+    <pre><code>{{Switch2.__sourceCode}}</code></pre>
 
     <p>自定义大小Switch</p>
     <ele-switchss></ele-switchss>
-    <pre><code>11</code></pre>
+    <pre><code>{{Switch3.__sourceCode}}</code></pre>
   </article>
 </template>
 
@@ -24,6 +24,13 @@ export default {
     'ele-switch': Switch,
     'ele-switchs': Switch2,
     'ele-switchss': Switch3,
+  },
+  setup(props) {
+    return {
+      Switch,
+      Switch2,
+      Switch3,
+    }
   },
 }
 </script>

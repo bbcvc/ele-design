@@ -1,3 +1,6 @@
+<demo>
+dialog快速引入
+</demo>
 <template>
   <ele-button @click="showDialog">打开</ele-button>
 </template>
