@@ -4,7 +4,7 @@ import fs from 'fs'
 import {baseParse} from '@vue/compiler-core'
 
 export default {
-  base: "./",
+  base: "https://eric_libidos.gitee.io/ele-desgin/",
 	assetsDir:'assets',
 	plugins:[md()],
 	vueCustomBlockTransforms: {
