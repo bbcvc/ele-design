@@ -1,9 +1,13 @@
 // @ts-nocheck
+import path from 'path'
 import {md} from './plugins/md'
 import fs from 'fs'
 import {baseParse} from '@vue/compiler-core'
 
 export default {
+	alias:{
+		'/@/':`${path.resolve(__dirname, 'src')}/`,
+	},
   base: "/ele-desgin/",
 	assetsDir:'assets',
 	plugins:[md()],

@@ -185,7 +185,7 @@ export default {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url('../assets/header@2x.8791c662.jpg');
+    background-image: url('../assets/header@2x.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

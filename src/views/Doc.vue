@@ -44,13 +44,13 @@
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="../assets/s1.webp" />
+                <img src="../assets/s2.webp" />
               </div>
               <div class="swiper-slide">
                 <img src="../assets/s2.webp" />
               </div>
               <div class="swiper-slide">
-                <img src="../assets/s3.webp" />
+                <img src="../assets/s2.webp" />
               </div>
               <div class="swiper-slide">Slide 3</div>
             </div>
