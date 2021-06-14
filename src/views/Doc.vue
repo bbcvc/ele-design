@@ -36,12 +36,15 @@
   <!-- 主题内容区 -->
   <main @touchstart="togglemenu">
     <div class="main-body">
-      <router-view></router-view>
+      <div class="scall">
+        <router-view></router-view>
+      </div>
     </div>
     <section>
       <div class="phone phone-m">
         <div class="mobile">
-          <div class="swiper-container">
+          <iframe :src="linkUrl" style="width: 100%; height: 100%"></iframe>
+          <div class="swiper-container" style="display: none">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img src="../assets/s2.webp" />
@@ -69,7 +72,8 @@
 </template>
 
 <script lang="ts">
-import { inject, Ref } from 'vue'
+import { inject, Ref, ref } from 'vue'
+import { onBeforeRouteUpdate } from 'vue-router'
 import Topnav from '../components/Topnav.vue'
 export default {
   components: {
@@ -77,12 +81,19 @@ export default {
   },
   setup() {
     const menuVisable = inject<Ref<boolean>>('menu')
+    let linkUrl = ref(window.location.href)
+    onBeforeRouteUpdate((to: any) => {
+      console.log(to)
+      linkUrl.value = `${window.location.host}${to.href}`
+      console.log(linkUrl)
+    })
     const togglemenu = () => {
       menuVisable.value ? (menuVisable.value = false) : ''
     }
     return {
       menuVisable,
       togglemenu,
+      linkUrl,
     }
   },
 }
@@ -175,7 +186,6 @@ main {
         width: 375px;
         height: 793px;
         border-radius: 38px;
-        background-color: pink;
         opacity: 0.8;
         overflow: hidden;
         img {
@@ -183,6 +193,37 @@ main {
         }
       }
     }
+  }
+}
+* {
+  &::-webkit-scrollbar-thumb  {
+    background-color: #7d7d7d;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar  {
+    width: 6px;
+    background-color: #f1f1f1;
+  }
+}
+.scall {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, FreeSans, Arial,
+    sansserif;
+  &::-webkit-scrollbar-thumb  {
+    background-color: #7d7d7d;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar  {
+    width: 6px;
+    background-color: #f1f1f1;
   }
 }
 @media screen and (max-width: 900px) {
