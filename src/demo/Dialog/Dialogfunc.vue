@@ -7,7 +7,7 @@ dialog快速引入
 
 <script lang="ts">
 import Button from '../../lib/button/Button.vue'
-import { openDialog } from '../../lib'
+import { openDialog } from '../../lib/Dialog'
 import { ref } from 'vue'
 export default {
   components: {
