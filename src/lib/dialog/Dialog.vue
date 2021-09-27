@@ -70,10 +70,10 @@ export default {
       props.closeOnClickOverlay && close()
     }
     const ok = () => {
-      props.ok?.() !== false && close()
+      props.ok() !== false && close()
     }
     const cancel = () => {
-      props.cancel?.() !== false && close()
+      props.cancel() !== false && close()
     }
     return {
       isDialog,
