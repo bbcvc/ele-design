@@ -84,9 +84,7 @@ export default {
     let linkUrl = ref(window.location.href)
     onBeforeRouteUpdate((to: any) => {
       console.log(to)
-      setTimeout(() => {
-        linkUrl.value = `${window.location.host}${to.href}`
-      }, 500)
+      linkUrl.value = `${window.location.origin}${window.location.pathname}${to.href}`
     })
     const togglemenu = () => {
       menuVisable.value ? (menuVisable.value = false) : ''
